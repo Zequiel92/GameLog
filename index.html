@@ -7,7 +7,60 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <h1>GameLog</h1>
+	  <header>
+		  <h1>GameLog</h1>
+		  <button>Todos</button>
+		  <button>Pendiente</button>
+		  <button>Jugando</button>
+		  <button>Completado</button>
+	  </header>
+
+	  <main>
+		  <h2>Añadir Nuevo Juego</h2>
+
+		  <form>
+			  <label for="Name">Título:</label>
+			  <input type="text" id="Name" name="Name">
+			  <label>Plataforma:</label>
+			  <select>
+				  <option>PC</option>
+				  <option>PlayStation</option>
+				  <option>Xbox</option>
+				  <option>Nintendo</option>
+			  </select>
+			  <label>Estado:</label>
+			  <select>
+				  <option>Pendiente</option>
+				  <option>Jugando</option>
+				  <option>Completado</option>
+			  </select>
+			  <label for="Score">Puntuación del 1 al 10</label>
+			  <input type="number" id="Score" min="1" max="10" name="Score">
+			  <button type="submit">Añadir Juego</button>
+			 
+		  </form>
+
+
+		  <section>
+			  <h2>Biblíoteca</h2>
+			  <article class="card-game1">
+				  <h3>Fifa 23</h3>
+				  <p><strong>Plataforma:</strong> PlayStation</p>
+				  <p><strong>Estado:</strong> Jugando</p>
+				  <p><strong>Puntuación:</strong> 8/10</p>
+				  <div class="card-actions">
+					  <button type="button">Editar</button>
+					  <button type="button">Eliminar</button>
+				  </div>
+
+			  </article>
+
+			  <article class="card-game2">
+				  <h3>Expedition 33</h3>
+
+			  </article>
+		  </section>
+	  </main>
   
   </body>
 </html>
