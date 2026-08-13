@@ -1,0 +1,287 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+}
+
+body {
+	font-family: MONOSPACE;
+	background: black;
+	color: white;
+
+}
+
+.cabecera {
+  background-color: #18181b;
+  color: #ffffff;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #27272a;
+  position: relative;
+}
+
+.cabecera h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f4f4f5;
+}
+
+/* En móvil, organizamos el menú verticalmente */
+.cabecera nav {
+  width: 100%;
+}
+
+.cabecera ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.cabecera button {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  background-color: #27272a;
+  color: #a1a1aa;
+  border: 1px solid #3f3f46;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cabecera button:hover {
+  background-color: #3f3f46;
+  color: #ffffff;
+}
+.cabecera button:active {
+  transform: scale(0.98);
+}
+
+
+/* ==========================================================================
+   1. ESTILOS BASE (Mobile First - Pantallas pequeñas)
+   ========================================================================== */
+
+/* Estilos para el contenedor principal */
+.main-box {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  color: #f4f4f5;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Titulares H2 */
+.main-box h2 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  border-bottom: 2px solid #27272a;
+  padding-bottom: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   FORMULARIO (Añadir Nuevo Juego)
+   -------------------------------------------------------------------------- */
+form {
+  background-color: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #a1a1aa;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 0.65rem;
+  background-color: #27272a;
+  border: 1px solid #3f3f46;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #3b82f6; /* Azul de enfoque */
+}
+
+form button[type="submit"] {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+
+/* --------------------------------------------------------------------------
+   SECCIÓN BIBLIOTECA (Grilla de Tarjetas)
+   -------------------------------------------------------------------------- */
+.main-box section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* En móvil las tarjetas van en 1 sola columna */
+.main-box section > article {
+  margin-bottom: 1rem;
+}
+
+/* Tarjeta individual */
+.card-game {
+  background-color: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-game:hover {
+  border-color: #3f3f46;
+}
+
+.card-game h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.card-game p {
+  font-size: 0.9rem;
+  color: #a1a1aa;
+}
+
+.card-game p strong {
+  color: #e4e4e7;
+}
+
+/* Botones de Editar / Eliminar */
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.card-actions button {
+  flex: 1;
+  padding: 0.45rem 0.75rem;
+  background-color: #27272a;
+  color: #e4e4e7;
+  border: 1px solid #3f3f46;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Estilo específico para Eliminar */
+.card-actions button:last-child {
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.card-actions button:last-child:hover {
+  background-color: #991b1b;
+  color: #ffffff;
+}
+
+.card-actions button:first-child:hover {
+  background-color: #3f3f46;
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER (Pie de página)
+   -------------------------------------------------------------------------- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #18181b;
+  border-top: 1px solid #27272a;
+  color: #71717a;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+
+/* ==========================================================================
+   2. MEDIA QUERIES (Breakpoints para pantallas medianas y grandes)
+   ========================================================================== */
+
+/* A partir de Tablets (>= 640px) */
+@media (min-width: 640px) {
+  
+  /* El formulario pasa a usar una grilla interna de 2 columnas */
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: end;
+  }
+
+  form label[for="Name"],
+  form input#Name {
+    grid-column: 1 / -1; /* El nombre del juego ocupa todo el ancho */
+  }
+
+  form button[type="submit"] {
+    grid-column: 1 / -1;
+  }
+
+  /* La biblioteca pasa de 1 columna a una grilla de 2 columnas */
+  .main-box section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .main-box section h2 {
+    grid-column: 1 / -1; /* El título "Biblioteca" abarca toda la fila superior */
+  }
+
+  .main-box section > article {
+    margin-bottom: 0;
+  }
+}
+
+/* A partir de Laptops / Escritorio (>= 1024px) */
+@media (min-width: 1024px) {
+  
+  /* La biblioteca pasa a tener 3 columnas para las tarjetas */
+  .main-box section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
